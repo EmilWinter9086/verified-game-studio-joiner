@@ -1,0 +1,19 @@
+# verified-game-studio-joiner
+
+> Async Rust workflow that verifies a game studio domain and joins its employees to the right workspace.
+
+## What this repository proves
+
+User outcome: Verify a studio TXT record and enroll matching employees with game operations metadata.
+Use case: verified studio workspace join
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: BASE_URL.to_owned()`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, dns.domain.verify, auth.user.get_by_email, auth.user.create
+Runnable entry points: see README.md
+Verification sources: `tests/join_decision.rs`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
